@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+        .main{
+            overflow:hidden;
+        }
+        /* starting of header */
+        .header-1{
+            width:100%;
+            height:40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #022369;
+            color:#fff;
+        }
+        .header-1 p a{
+            text-decoration: none;
+            color:#fff;
+        }
+        .phone-box{
+            display: flex;
+            width:100px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .phone-box i{
+            font-size: 20px;
+            padding-right:10px;
+        }
+        .responsive{
+            display: none;
+        }
+        
+        .helpdesk:hover{
+                           color:yellow;
+        }
+        /* starting of header-responsive */
+        @media (max-width:980px){
+            .header-1{
+            width:100%;
+            display: flex;
+            height:50px;
+            flex-direction: column;
+        }
+        .responsive{
+            display: block;
+            color:#fff;
+        }
+        .notification{
+            display: none;
+        }
+        }
+        /* end of header-1 */
+        /* start of header-1 */
+        .header-2{
+            width:100%;
+            height:104px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border:1px solid green;
+        }
+        .header-2-left{
+            width:400px;
+            height:93px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /* border:1px solid black; */
+        }
+        .header-2-right{
+            width:600px;
+            height:93px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            /* border:1px solid black; */
+        }
+        .email-box{
+            width:254px;
+            height:90px;
+            /* border:1px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .dpt-name{
+         
+        }
+        .logo{
+            width:90px;
+            height:90px;
+        }
+        .header-2-left .icon-box{
+            width:40px;
+            height:43px;
+            /* border:1px solid black; */
+            display: flex;align-items: center;
+            justify-content: center;
+        }
+         .icon-box{
+              display: flex;
+              width:40px;
+              height:40px;
+              align-items: center;
+              justify-content: center;
+              /* border:1px solid black; */
+        }
+        .icon-box i{
+            font-size: 20px;
+            color:rgb(240, 0, 0);
+           
+        }
+        .email{
+            display: flex;
+            flex-direction: column;
+        }
+           .nemblem{
+            width:60px;
+            height:60px;
+            /* border:1px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } 
+        .nationalemb{
+            width:81px;
+            height:100px;
+        }
+        /* header-2 responsive */
+        @media (max-width:708px){
+            .email-box{
+                display: none;
+            }
+            .header-2-left{
+                width:2500px;
+            }
+        }
+        /* end of header-2 section */
+        /* start of menu bar */
+        .menubar{
+            width:100%;
+            height:60px;
+            background:linear-gradient(180deg, #001E5F 0%, #1F5EE5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .menubar ul{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap:30px;
+        }
+       
+        .menubar ul li a{
+            color:white;
+            text-decoration: none;
+           
+        }
+        .menubar ul li a:hover{
+            color:yellow;
+        }
+        /* responsive menubar */
+        @media (max-width:1280px){
+            .menubar ul{
+                display: none;
+            }
+            #humber{
+             display: block; 
+          }
+        }
+        #humber{
+           
+            font-size: 40px;
+            color:rgb(255, 255, 255);
+            position: absolute;
+            left:50px;
+            cursor:pointer;
+            /* display: none; */
+            
+        }
+        .drop-menu{
+            width:100%;
+            height:600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:linear-gradient(180deg, #001E5F 0%, #1F5EE5 100%);
+            flex-direction: column;
+            display: none;
+            
+
+        }
+        .drop-menu ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            list-style-type: none;
+            gap:50px;
+        }
+        .drop-menu ul li a{
+            text-decoration: none;
+            color:#fff;
+        }
+        .drop-menu ul li a:hover{
+            color:yellow;
+        }
+        /* starting of hero section */
+        .hero-section{
+            width:100%;
+            height:200%;
+      
+           
+        }
+        .main-box{
+            width:100%;
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            margin-top:60px;
+
+
+        }
+
+        .main-central{
+            width:799px;
+            height:500px;
+            background-color:rgba(5, 41, 118, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap:40px;
+            border-radius:10px;
+            flex-wrap: wrap;
+
+        }
+        .sub-box-central{
+            width:130px;
+            height:108px;
+            border:1px solid rgb(255, 255, 255);
+            display: flex;
+            background-color: #fff;
+            border-radius:10px;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap:10px;
+            text-align: center;
+           
+
+        }
+        .sub-box-central-img{
+            width:40px;
+            height:40px;
+        }
+        @media (max-width:480px){
+            .main-central{
+                height:770px;
+            }
+        }
+     .officers{
+        width:100%;
+        height:500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top:50px;
+        background-color: #f5f5f5;
+        gap:40px;
+        flex-wrap: wrap;
+     }
+     .officers-box{
+        width:300px;
+        height:270px;
+        border:1px solid rgb(97, 95, 95);
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        border-radius:10px;
+        gap:30px;
+     }
+     .img-box{
+        width:100px;
+        border-radius:50%;
+     }
+     .img-box img{
+        width:100px;
+        border-radius:50%;
+     }
+     /* responsive officers */
+     @media (max-width:1324px){
+        .officers{
+            height:610px;
+        }
+     }
+     @media (max-width:620px){
+        .officers{
+            height:1200px;
+        }
+     }
+     /* end of officers */
+     /* starting of the index-section */
+     .index-main{
+        width:100%;
+        height:300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .index-box-header{
+        width:1300px;
+        height:100px;
+        margin-top:100px;
+        color:white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+     }
+     .index-box-header-item{
+        width:400px;
+        height:100px;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        background:linear-gradient(180deg, #001E5F 0%, #1F5EE5 100%);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+     }
+     @media (max-width:1205px){
+        .index-box-header-item{
+            height:150px;
+            width:350px;
+        }
+     }
+     @media (max-width:1063px){
+        .index-box-header-item{
+            height:170px;
+            width:170px;
+        }
+     }
+     @media (max-width:501px){
+        .index-box-header-item{
+            height:140px;
+            width:100px;
+        }
+     }
+     /* end of index-section */
+     /* /start of students -section */
+     .student-container{
+        width:100%;
+        height:700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap:50px;
+     }
+     .student-box{
+        width:87%;
+        height:100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #c9dfff;
+     }
+     .student-box img{
+        width:60px;
+        height:60px;
+        margin-left:50px;
+     }
+     .num-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+     }
+     .cicle{
+        width:150px;
+        height:020px;
+     }
+     /* starting of the statistic section */
+     .random{
+        width:100%;
+        height:380px;
+        text-align: center;
+     }
+     .stat-container{
+        width:100%;
+        height:480px;
+        /* border:1px solid black; */
+        display: flex;
+        background-color: #c9dfff;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+     }
+     .stat{
+        width:70%;
+        height:450px;
+        background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+        /* border:1px solid black; */
+        gap:30px;
+        justify-content: space-between;
+        
+        gap:30px;
+     }
+     .stat-box{
+        width:300px;
+        height:220px;
+        /* border:1px solid black; */
+        border-radius:10px;
+        display: flex;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap:30px;
+        flex-direction: column;
+
+     }
+     .stat-box img{
+        width:50px;
+        height:50px;
+       
+     }
+     @media (max-width:1224px){
+        .stat-box{
+            width:90%;
+            
+        }
+        .stat-container{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top:60px;
+            height:1500px;
+        }
+     }
+     /* starting of question box */
+     .question-container{
+        width:100%;
+        height:450px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #c9dfff;
+        flex-wrap: wrap;
+     }
+     .question-box{
+        width:500px;
+        height:100px;
+        border-radius: 10px;
+        background-color: #fff;;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-around;
+        
+     }
+     .drop-i{
+        width:30px;
+        height:30px;
+
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right:30px;
+        justify-content: center;
+        background-color: #1F5EE5;
+        border-radius: 50%;
+     
+     
+     }
+     #up{
+        font-size:20px;
+   
+        position: absolute;
+         display: none; 
+     }
+     #down{
+        font-size:20px;
+   
+        position: absolute;
+        /* display: none; */
+     }
+     /* footer */
+    .footer{
+        width:100%;
+        height:600px;
+        margin-top:70px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #1F5EE5;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .footer-box-1{
+        width:370px;
+        height:560px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        line-height: 29px;
+    }
+    .footer-box-inbox{
+        width:380px;
+        height:120px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 10px;;
+
+    }
+    .footer-img-1{
+        width:40px;
+        height:40px;
+    }
+    .footer-box-2,.footer-box-3{
+        width:176px;
+        height:190px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      
+
+    }
+    .footer-box-2 ul,.footer-box-3 ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:30px;
+
+    }
+    .footer-box-2 ul li a,.footer-box-3 ul li a{
+        text-decoration: none;
+        color:black;
+    }
+    .footer-box-4{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap:20px;
+        text-align: center;
+    }
+    .p-container{
+        text-align: center;
+    }
+    @media (max-width:408px){
+        .footer-box-inbox{
+            width:300px;
+        }
+    }
+    /* start of last footer */
+    .last-footer{
+        width:100%;
+        background-color:#1F5EE5;
+        height:200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap:30px;
+        flex-direction: column;
+
+    }
+
+   
+ 
+    
+
+
+     
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header-1">
+            <p><a href="" class="notification">Maharashtra Education Portal : SARAL 2.0 - Systematic Administrative Reforms for Achieving Learning by Students (Official Website)</a></p>
+            <marquee class="responsive"behavior="scroll" direction="left"><p ><a href="">Maharashtra Education Portal : SARAL 2.0 - Systematic Administrative Reforms for Achieving Learning by Students (Official Website)</a></p></marquee>
+            <div class="phone-box"><p><a href="" class="helpdesk"> <i class="fa-solid fa-phone"></i>Helpdesk</a></p></div>
+         </div>
+         <div class="header-2">
+            <div class="header-2-left">
+                <img class='logo'src="http://education.maharashtra.gov.in/images/logo1.jpg" alt="">
+                <div class="dpt-name">
+                    <h4>शालेय शिक्षण व क्रीडा विभाग महाराष्ट्र शासन</h4>
+                    <h4>School Education and Sport Department</h4>
+                    <h5>Government of Maharashtra</h5>
+                </div>
+
+            </div>
+            <div class="header-2-right">
+                <div class="email-box">
+                    <div class="icon-box">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="email">
+                        <p>Email Us:</p>
+                        <p><a href="">educom-mah@mah.gov.in</a></p>
+                    </div>
+                </div>
+                <div class="nemblem">
+                    <img class='nationalemb'src="http://education.maharashtra.gov.in/images/national-emblem-india.png" alt="">
+                </div>
+
+            </div>
+         </div>
+        <div class="menubar">
+            <i  id="humber"class="fa-solid fa-bars"></i>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">  About SARAL</a></li>
+                <li><a href="">  Key Persons</a></li>
+                <li><a href="">Organogram</a></li>
+                <li><a href=""> Web Analytics</a></li>
+                <li><a href=""> Data Analytics Dashboard</a></li>
+                <li><a href=""> General Query Module</a></li>
+                <li><a href=""> Web Information Manager</a></li>
+                <li><a href="">Contact Us</a></li>
+               
+            </ul>
+        </div>
+        <div class="drop-menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">  About SARAL</a></li>
+                <li><a href="">  Key Persons</a></li>
+                <li><a href="">Organogram</a></li>
+                <li><a href=""> Web Analytics</a></li>
+                <li><a href=""> Data Analytics Dashboard</a></li>
+                <li><a href=""> General Query Module</a></li>
+                <li><a href=""> Web Information Manager</a></li>
+                <li><a href="">Contact Us</a></li>
+
+            </ul>
+        </div>
+        <div class="hero-section">
+            
+            <img src="http://education.maharashtra.gov.in/images/images-banner-img3.png" alt="">
+     
+        </div>
+        <div class="main-box">
+            <div class="main-central">
+                <div class="sub-box-central"><img class="sub-box-central-img"src="http://education.maharashtra.gov.in/images/images-graduating-student.png" alt=""><p>Student Portal</p>  </div>
+                <div class="sub-box-central"><img class="sub-box-central-img"src="http://education.maharashtra.gov.in/images/images-school.png" alt="">            <p>School Portal</p>  </div>
+                <div class="sub-box-central"><img class="sub-box-central-img"src="http://education.maharashtra.gov.in/images/images-website.png" alt="">           <p>Staff Portal</p>  </div>
+                <div class="sub-box-central"><img class="sub-box-central-img"src="http://education.maharashtra.gov.in/images/images-sanstha.png" alt="">           <p>Sanstha Portal</p>  </div>
+                <div class="sub-box-central"><img class="sub-box-central-img"src="http://education.maharashtra.gov.in/images/images-contract.png" alt="">          <p>RTE 25 % Admission</p>  </div>
+                <div class="sub-box-central"><img class="sub-box-central-img"src="http://education.maharashtra.gov.in/images/images-meeting.png" alt="">           <p>Sanch Manyata</p>  </div>
+                <div class="sub-box-central"><img class="sub-box-central-img"src="http://education.maharashtra.gov.in/images/images-iftar.png" alt="">             <p>MDM</p>  </div>
+                <div class="sub-box-central"><img class="sub-box-central-img"src="http://education.maharashtra.gov.in/images/images-landing-page.png" alt="">      <p>eMarksheet</p>  </div>
+                <div class="sub-box-central"><img class="sub-box-central-img"src="http://education.maharashtra.gov.in/images/images-balls-sports.png" alt="">      <p>Sports Portal</p>  </div>
+            </div>
+
+        </div>
+        <div class="officers">
+            <div class="officers-box">
+                <div class="img-box">
+                    <img src="http://education.maharashtra.gov.in/images/cm.jpg" alt="">
+                    
+                </div>
+                <p><b>Shri. Eknath Shinde</b></p>
+                    <p>  Hon'ble Chief Minister, Maharashtra State.</p>
+            </div>
+            <div class="officers-box">
+                <div class="img-box">
+                    <img src="http://education.maharashtra.gov.in/images/DeepakKesarkar.jpg" alt="">
+                    
+                </div>
+                <p><b>Shri. Deepak Kesarkar</b></p>
+                    <p>Hon'ble Minister, School Education, Marathi Bhasha Maharashtra.</p>
+            </div>
+            <div class="officers-box">
+                <div class="img-box">
+                    <img src="http://education.maharashtra.gov.in/images/secretary_edu.jpg" alt="">
+                    
+                </div>
+                <p><b>Shri. Ranjit Singh Deol (I.A.S.)</b></p>
+                    <p>Hon'ble Secretary, School Education and Sports Department.</p>
+            </div>
+            <div class="officers-box">
+                <div class="img-box">
+                    <img src="http://education.maharashtra.gov.in/images/commissioner.png" alt="">
+                
+                </div>
+                <p><b>Shri. Suraj Mandhare (I.A.S.)</b></p>
+                <p>Hon'ble Commissioner (Education), Maharashtra.</p>
+            </div>
+            
+            
+        </div>
+        <div class="index-main">
+            
+        <div class="index-box-header">
+            <div class="index-box-header-item">
+                <h3>Student Portal</h3>
+                <h4>To Capture Student Information</h4>
+            </div>
+            <div class="index-box-header-item">
+                <h3>School Portal</h3>
+                <h4>An online system for gathering school Information.</h4>
+            </div>
+            <div class="index-box-header-item">
+                <h3>Staff Portal</h3>
+                <h4>Information of teaching and non teaching staff</h4>
+            </div>
+        </div>
+        </div>
+        <div class="student-container">
+            <div class="student-container">
+                <div class="student-box">
+                    <img src="http://education.maharashtra.gov.in/images/images-group.png" alt="">
+                    <div class="num-box"><h2><b>19656858</b></h2>
+                        <h2> Total Students</h2></div>
+                        <img class="circle"src="http://education.maharashtra.gov.in/images/images-circle.svg" alt="">
+                    
+                </div>
+                <div class="student-box">
+                    <img src="http://education.maharashtra.gov.in/images/images-boy.png" alt="">
+                    <div class="num-box"><h2><b>10328350</b></h2>
+                        <h2> Boys</h2></div>
+                        <img class="circle"src="http://education.maharashtra.gov.in/images/images-circle.svg" alt="">
+                </div>
+                <div class="student-box">
+                    <img src="http://education.maharashtra.gov.in/images/images-girl.png" alt="">
+                    <div class="num-box">
+                    <h2><b>9328508</b></h2>
+                    <h2>Girls</h2>
+                    </div>
+                    <img class="circle"src="http://education.maharashtra.gov.in/images/images-circle.svg" alt="">
+                </div>
+            </div>
+            
+        </div>
+        <div class="randon">
+            
+        <div class="stat-container">
+            <div class="stat-box">
+                <img  class='stat-img'height=40px width=40px src="http://education.maharashtra.gov.in/images/images-student.png" alt="">
+                <h4><b>SARAL Statistics
+                   </b></h4>
+                <h5> For Hon'ble Secretary, Deputy Secretary, Education Commissioner and MPSP</h5>
+            </div>
+            <div class="stat-box">
+                <img  class='stat-img'height=40px width=40px src="http://education.maharashtra.gov.in/images/images-analytics.png" alt="">
+                <h4><b>Data Analytics
+                   </b></h4>
+                <h5> Dashboard of Student,School and Teacher.</h5>
+            </div>
+            <div class="stat-box">
+                <img  class='stat-img'height=40px width=40px src="http://education.maharashtra.gov.in/images/images-book-stack.png" alt="">
+                <h4><b>MPSP Login
+                  </b></h4>
+                <h5>  Maharashtra Prathamik Shikshan Parishad.</h5>
+            </div>
+            <div class="stat-box">
+                <img  class='stat-img'height=40px width=40px src="http://education.maharashtra.gov.in/images/images-online-booking.png" alt="">
+                <h4><b>5% Sports Reservation Portal
+                 </b></h4>
+                <h5>   5% Sports Reservation application.</h5>
+            </div>
+        </div>
+        <div class="question-container">
+            
+        
+            <div class="question-box">
+                <h4>1. GRs</h4>
+                <div class="drop-i">
+                    <i id="up"class="fa-solid fa-chevron-up"></i>
+                    <i id="down"class="fa-solid fa-chevron-down"></i>
+                </div>
+                
+                
+            </div>
+            <div class="question-box">
+                <h4>2. Circular</h4>
+                <div class="drop-i">
+                    <i id="up"class="fa-solid fa-chevron-up"></i>
+                    <i id="down"class="fa-solid fa-chevron-down"></i>
+                </div>
+              
+    
+            </div>
+            <div class="question-box">
+                <h4>3. News Update</h4>
+                <div class="drop-i">
+                    <i id="up"class="fa-solid fa-chevron-up"></i>
+                    <i id="down"class="fa-solid fa-chevron-down"></i>
+                </div>
+               
+    
+            </div>
+            <div class="question-box">
+                <h4>4. Related Links</h4>
+                <div class="drop-i">
+                    <i id="up"class="fa-solid fa-chevron-up"></i>
+                    <i id="down"class="fa-solid fa-chevron-down"></i>
+                </div>
+              
+    
+            </div>
+
+        </div>
+
+        
+        </div>
+        <div class="footer">
+            <div class="footer-box">
+                <div class="footer-box-inbox">
+                    <img src="http://education.maharashtra.gov.in/images/images-unique-visitor.png" alt="" class="footer-img-1">
+                    <h5>Total Visitors<br><b>5813096</b></h5>
+                    <h5>Today's Count<br><b>2185</b></h5>
+                    <h5>Last Reviewed<br><b>24-09-2023</b></h5>
+                </div>
+            </div>
+            <div class="footer-box-2">
+                <ul>
+                    <li><a href=""> > Disclaimer</a></li>
+                    <li><a href=""> > Terms & Conditions</a></li>
+                    <li><a href=""> > Privacy Policy</a></li>
+                    <li><a href=""> > Copyright Policy</a></li>
+                   
+                </ul>
+            </div>
+            <div class="footer-box-3">
+                <ul>
+                    <li><a href=""> > Hyperlink Policy</a></li>
+                    <li><a href=""> > Accessibility Statement</a></li>
+                    <li><a href=""> > Feedback</a></li>
+                    <li><a href=""> > Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-box-4">
+                <img src="http://education.maharashtra.gov.in/images/images-NIC-LOGO.png" alt="" class="nic">
+                <div class="p-container">
+                    This website is designed, developed by ROHIT SUL,
+
+                     This website contents are owned,provided,updated and maintained by School Education and Sports Dept, Government of Maharashtra.
+                     
+                     Supports: Firefox 2.0+ Google Chrome 6.0+ (.68)
+                </div>
+            </div>
+        </div>
+        <div class="last-footer">
+            <p>© हे शालेय शिक्षण व क्रीडा विभागाचे अधिकृत संकेतस्थळ आहे. सर्व हक्क सुरक्षित.</p>
+            <p>©2023 This is the official website of School Education and Sports Department, Govt of Maharashtra.All Rights Reserved.</p>
+        </div>
+</div>
+    <script>
+        var humber=document.querySelector("#humber");
+        var dropbox=document.querySelector(".drop-menu");
+         var check=0;
+        humber.addEventListener("click",function(){
+           if(check==0){
+            dropbox.style.display="block";
+            humber.style.border="5px solid black";
+            check=1;
+           }
+           else{
+            dropbox.style.display="none";
+            humber.style.border="none";
+            check=0;
+           }
+        })
+        // question box
+        var qbox=document.querySelector(".question-box")
+        var up=document.querySelector("#up");
+        var down=document.querySelector("#down");
+        var check2=0;
+        qbox.addEventListener("click",function(){
+             if(check2==0) {
+                up.style.display="block";
+                down.style.display="none";
+                check2=1;
+                qbox.style.height="200px";
+             }
+             else{
+                up.style.display="none";
+                down.style.display="block";
+                check2=0;
+                qbox.style.height="100px";
+             }
+        })
+    </script>
+    
+    
+    
+</body>
+</html>
